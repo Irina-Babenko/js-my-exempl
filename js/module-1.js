@@ -1,5 +1,3 @@
-'use strict';
-
 //!
 
 //*Компиляция — программа, переводящая написанный на языке программирования текст в набор машинных кодов.
@@ -121,9 +119,9 @@ console.log(typeof userInfo); //object
 
 //! арифметические операции
 //* (+)
-const g = 5;
-const y = 3;
-console.log(g + y);
+const d = 5;
+const n = 3;
+console.log(d + n);
 
 //* (-)
 const w = 5;
@@ -149,3 +147,162 @@ console.log(z ** f);
 const u = 8;
 const p = 5;
 console.log(u % p);
+
+//! конкатенация строк
+//* к строке и любому другому типу данных, результатом будет новая строка, содержащая объединение исходных значений
+
+console.log('Mango' + 55); // "Mango55"
+
+console.log(1 + '2' + 4); // "124"
+
+console.log(1 + 2 + '4'); // "34"
+
+const userName = 'Poly';
+const message = 'Welcome Poly!';
+console.log('Welcome ' + userName + '!');
+
+//! преобразование типов: строки
+//! явное
+console.log(String(false)); // "false"
+console.log(String(null)); // "null"
+console.log(String(undefined)); // "undefined"
+
+//! не явное
+console.log('5' + false); // "5false"
+console.log('5' + null); // "5null"
+console.log('5' + undefined); // "5undefined"
+
+//! шаблонные строки
+
+//? ex.:
+const guestName = 'Mango';
+const roomNumber = 207;
+const greeting = `Welcome ${guestName} , ваш номер номера является ${roomNumber} !`;
+console.log(greeting); // "Welcome Mango, ваш номер номер 207!"
+
+//? ex.:
+const productName = 'Droid';
+const pricePerItem = 3500;
+const meSsage = `You picked ${productName}, price per item is ${pricePerItem} credits`;
+console.log(meSsage);
+
+//? ex.:
+const pricePerDroid = 800;
+const orderedQuantity = 6;
+const deliveryFee = 50;
+const totalPrice = pricePerDroid * orderedQuantity + deliveryFee;
+const mesSage = `You ordered droids worth ${totalPrice} credits`;
+console.log(mesSage);
+
+//! длина строчки
+//! length
+const proDuctName = 'Repair droid';
+console.log(proDuctName.length); // 12
+console.log('Repair droid'.length); // 12
+
+//! индексация строк
+//! string[index]
+//* индексация элементов строки начинается с нуля. Первый символ имеет индекс 0, второй-индекс 1, третий-2 и так далее.
+const product = 'Repair droid';
+console.log(product[11]); // 'd'
+
+//* последний єлемент строки
+const lastElementIndex = product.length - 1;
+console.log(product[lastElementIndex]); // 'd'
+
+//* последний єлемент строки без промежуточной переменной
+console.log(product[product.length - 1]); // 'd'
+
+//! дробное число
+//! toFixed()
+//* округления результата до определенного числа знаков после точки
+/* console.log(( 0 . 1 + 0 . 2 ).toFixed( 1 )); // "0.3" */
+
+//! ФУНКЦИЯ function
+// Объявление функции multiply
+function doStuff() {
+  // Тело функции
+  console.log('Log inside multiply function');
+}
+// Вызовы функции multiply = имя +()
+doStuff(); // 'Log inside multiply function'
+
+//? ex.:
+function sayHi() {
+  console.log('Hello, this is my first function!');
+}
+sayHi();
+
+//! параметры и аргументы
+// Объявление параметров x, y, z
+function multiply(x, y, z) {
+  console.log(`Result: ${x * y * z}`);
+}
+
+// Передача аргументов
+multiply(2, 3, 5); // "Result: 30"
+multiply(4, 8, 12); // "Result: 384"
+
+//? ex.:
+function add(a, b, c) {
+  /*const result = a + b + c;*/
+  console.log(`Addition result equals ${a + b + c}`);
+}
+add(15, 27, 10);
+
+//! возврата значения
+//! return
+//?
+function muLtiply(x, y, z) {
+  const product = x * y * z;
+  // Возвращаем результат выражения умножения
+  return product;
+}
+
+//?
+function multiply(x, y, z) {
+  return x * y * z;
+}
+const result = multiply(2, 3, 5);
+console.log(result); // 30
+
+//?               не поняла єтот пример
+function makeMessage(username) {
+  console.log(`Hello ${username} `);
+  /* return `Hello ${username} `; */
+}
+makeMessage('Jacob'); // в консоле будет "Hello Jacob" но єто не значение результата работы функции // значение которое возвращается будет  undefined
+
+//?
+function add(a, b, c) {
+  return a + b + c;
+}
+add(15, 27, 10); //
+
+//! область видимости функции
+//* Глобальная переменная
+/*const value = "I'm a global variable";
+
+function foo() {
+  //* Можно обратиться к глобальной переменной
+  console.log(value); // "I'm a global variable"
+} */
+
+/*foo();
+//* Можно обратиться к глобальной переменной
+console.log(value);
+// "I'm a global variable"
+
+function foo() {
+  // Локальная переменная
+  const value = "I'm a local variable";
+  // Можно обратиться к локальной переменной
+  console.log(value); // "I'm a local variable"
+} */
+
+//* локальная область видимости
+/*foo();
+console.log(value); // ReferenceError: value is not defined
+// Ошибка: локальная переменная не видна за пределами
+функции;
+*/
