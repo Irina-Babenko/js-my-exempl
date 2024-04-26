@@ -84,6 +84,8 @@ console.log(typeof userSizeInfo);
 
 //! BOOLEAN
 //* логический тип данных, имеет два значения: true и false.
+//* true = 1
+//* false = 0
 let trueOrFalse = 8 > 5;
 console.log(trueOrFalse); //true
 
@@ -103,6 +105,10 @@ typeof null === 'object';
 
 let value = null;
 console.log(value); // null
+
+//?
+// const mAssege = prompt("Введить ім'я");
+// console.log(mAssege);
 
 //! OBJECT
 //* относится к структуре данных, содержит в себе данные и инструкции по работе с ними, могут обозначать реальные вещи, например: машину, яблоко, человека
@@ -147,6 +153,8 @@ console.log(z ** f);
 const u = 8;
 const p = 5;
 console.log(u % p);
+
+//! оператор инверсии "!" = "не", т.е. console.log(!false); // "true"
 
 //! конкатенация строк
 //* к строке и любому другому типу данных, результатом будет новая строка, содержащая объединение исходных значений
@@ -306,3 +314,8 @@ console.log(value); // ReferenceError: value is not defined
 // Ошибка: локальная переменная не видна за пределами
 функции;
 */
+
+//? exempel lesson - 1
+//! parsInt
+const str = '257.a32px';
+console.log(Number.parseInt(str)); //257
