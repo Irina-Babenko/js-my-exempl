@@ -27,7 +27,7 @@ console.log('JavaScript is awesome!'); // JavaScript is awesome!
 //* тип данных - то что хранится в контейнере
 //* const - ключевое слово для оглашения переменной, значение которой не меняется
 //* let - ключевое слово для оглашения переменной, ограниченная область видимости, значение меняется
-
+/*
 //? ex.:
 const age = 20;
 console.log(age); //20
@@ -96,6 +96,7 @@ console.log(typeof id); */ //Sumbol
 
 //! UNDERFINED
 //* примитивное значение, автоматически присваивается переменным которые были только обьявлены без установленых значений
+/*
 let nameUser;
 console.log(typeof nameUser); //undefined
 
@@ -228,6 +229,7 @@ console.log(product[product.length - 1]); // 'd'
 
 //! ФУНКЦИЯ function
 // Объявление функции multiply
+/*
 function doStuff() {
   // Тело функции
   console.log('Log inside multiply function');
@@ -254,6 +256,7 @@ multiply(4, 8, 12); // "Result: 384"
 //? ex.:
 function add(a, b, c) {
   /*const result = a + b + c;*/
+/*
   console.log(`Addition result equals ${a + b + c}`);
 }
 add(15, 27, 10);
@@ -277,10 +280,10 @@ console.log(result); // 30
 //?               не поняла єтот пример
 function makeMessage(username) {
   console.log(`Hello ${username} `);
-  /* return `Hello ${username} `; */
+  /* return `Hello ${username} `; /*
 }
 makeMessage('Jacob'); // в консоле будет "Hello Jacob" но єто не значение результата работы функции // значение которое возвращается будет  undefined
-
+/*
 //?
 function add(a, b, c) {
   return a + b + c;
@@ -314,8 +317,9 @@ console.log(value); // ReferenceError: value is not defined
 // Ошибка: локальная переменная не видна за пределами
 функции;
 */
-
+/*
 //? exempel lesson - 1
 //! parsInt
 const str = '257.a32px';
 console.log(Number.parseInt(str)); //257
+*/
