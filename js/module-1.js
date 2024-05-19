@@ -63,7 +63,7 @@
 // console.log(gInfinity);
 
 // //* NaN
-// //если в математическом выражении есть NaN то результатом вычеслений с его участием будет  NaN.
+//если в математическом выражении есть NaN то результатом вычеслений с его участием будет  NaN.
 // let getNan = 'text' / 10;
 // console.log(getNan);
 
@@ -108,8 +108,8 @@
 // console.log(value); // null
 
 // //?
-// // const mAssege = prompt("Введить ім'я");
-// // console.log(mAssege);
+// const mAssege = prompt("Введить ім'я");
+// console.log(mAssege);
 
 // //! OBJECT
 // //* относится к структуре данных, содержит в себе данные и инструкции по работе с ними, могут обозначать реальные вещи, например: машину, яблоко, человека
@@ -231,10 +231,10 @@
 // Объявление функции multiply
 
 // function doStuff() {
-//   // Тело функции
+// Тело функции
 //   console.log('Log inside multiply function');
 // }
-// // Вызовы функции multiply = имя +()
+// Вызовы функции multiply = имя +()
 // doStuff(); // 'Log inside multiply function'
 
 // //? ex.:
@@ -244,12 +244,12 @@
 // sayHi();
 
 // //! параметры и аргументы
-// // Объявление параметров x, y, z
+// Объявление параметров x, y, z
 // function multiply(x, y, z) {
 //   console.log(`Result: ${x * y * z}`);
 // }
 
-// // Передача аргументов
+// Передача аргументов
 // multiply(2, 3, 5); // "Result: 30"
 // multiply(4, 8, 12); // "Result: 384"
 
@@ -266,7 +266,7 @@
 // //?
 // function muLtiply(x, y, z) {
 //   const product = x * y * z;
-//   // Возвращаем результат выражения умножения
+// Возвращаем результат выражения умножения
 //   return product;
 // }
 
@@ -302,19 +302,19 @@
 // foo();
 // //* Можно обратиться к глобальной переменной
 // console.log(value);
-// // "I'm a global variable"
+// "I'm a global variable"
 
 // function foo() {
-//   // Локальная переменная
+// Локальная переменная
 //   const value = "I'm a local variable";
-//   // Можно обратиться к локальной переменной
+// Можно обратиться к локальной переменной
 //   console.log(value); // "I'm a local variable"
 // }
 
 // //* локальная область видимости
 // /*foo();
 // console.log(value); // ReferenceError: value is not defined
-// // Ошибка: локальная переменная не видна за пределами
+// Ошибка: локальная переменная не видна за пределами
 // функции;
 
 // //? exempel lesson - 1

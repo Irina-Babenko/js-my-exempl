@@ -29,8 +29,8 @@
 //   return 'undefined';
 // }
 // console.log(checkAge(17));
-// /*
-// //! if...else
+
+//! if...else
 // function checkStorage(available, ordered) {
 //   if (available >= ordered) {
 //     return 'Order is processed, our manager will contact you';
@@ -39,7 +39,7 @@
 //     return 'Not enough goods in stock!';
 //     }
 // }
-// */
+
 // //! else...if          почему в приоритете ставить === 0 в позицию if?
 // function checkStorage(available, ordered) {
 //   if (ordered === 0) {
@@ -89,12 +89,12 @@
 
 // //! Преобразование типов: логическое
 // //! 6 случаев , которые приводятся к false :
-// /* 1. 0
+// 1. 0
 // 2. ""
 // 3. Nan
 // 4. null
 // 5. underfined
-// 6.false */
+// 6.false
 
 // //!
 // //?  оператор &&
@@ -140,15 +140,15 @@
 // //* str. includes (substring)
 
 // function checkForName(fullName, firstName) {
-//   // Приводим строки к одному регистру перед сравнением
+// Приводим строки к одному регистру перед сравнением
 //   const fullNameLower = fullName.toLowerCase();
 //   const firstNameLower = firstName.toLowerCase();
 
-//   // Проверяем вхождение имени в полное имя
+// Проверяем вхождение имени в полное имя
 //   return fullNameLower.includes(firstNameLower);
 // }
 
-// // Примеры вызова функции
+// Примеры вызова функции
 // console.log(checkForName('John Doe', 'john')); // Выведет: true
 // console.log(checkForName('John Doe', 'Jane')); // Выведет: false
 
