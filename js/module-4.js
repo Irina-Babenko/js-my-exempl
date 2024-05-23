@@ -1,9 +1,9 @@
 //! практика модуль 4
 
-// Створіть об'єкт calculator із трьома методами:
-//read(a, b) - приймає два аргументи та зберігає їх як властивості об'єкта
-//sum() - повертає суму збережених значень
-//mult() - перемножує збережені значення та повертає результат
+//* Створіть об'єкт calculator із трьома методами:
+//*read(a, b) - приймає два аргументи та зберігає їх як властивості об'єкта
+//*sum() - повертає суму збережених значень
+//*mult() - перемножує збережені значення та повертає результат
 
 // const calculator = {
 //   read(a, b) {
@@ -26,12 +26,12 @@
 // console.log(calculator.mult());
 
 //!
-// Task - 1
-// Створи функцію яка буде приймати 3 параметри та формувати об'єкт покупки
-// 1 Назва продукту
-// 2 Кількість одиниць
-// 3 Ціна за 1 одиницю товару
-// Функція має повертати сформований об'єкт з ключами name, price, quantity, totalPrice.
+//* Task - 1
+//* Створи функцію яка буде приймати 3 параметри та формувати об'єкт покупки
+//* 1 Назва продукту
+// *2 Кількість одиниць
+// *3 Ціна за 1 одиницю товару
+// *Функція має повертати сформований об'єкт з ключами name, price, quantity, totalPrice.
 //*
 // function createBascet(product, quantity, price) {
 //   return {
@@ -44,9 +44,9 @@
 // console.log(createBascet('pizza', 3, 120));
 
 //!
-// Task - 2
-// Створи функцію для ведення статистики комп'ютерного клубу. Функція приймає 1 параметр це об'єкт користувачів де ключ це ім'я користувача, а значення це час оренди у хвилинах.
-// Функція повертає рядок з інформацією про те скільки було користувачів та який середній час оренди комп'ютер.
+//* Task - 2
+//* Створи функцію для ведення статистики комп'ютерного клубу. Функція приймає 1 параметр це об'єкт користувачів де ключ це ім'я користувача, а значення це час оренди у хвилинах.
+//* Функція повертає рядок з інформацією про те скільки було користувачів та який середній час оренди комп'ютер.
 
 //*
 
@@ -275,88 +275,82 @@
 // const entries = Object.entries(user);
 // console.log(entries);
 
-//!
-function isEnoughCapacity(products, containerSize) {
-  let totalProducts = 0;
+//! Деструктуризация масива
 
-  for (const quantity of Object.values(products)) {
-    totalProducts += quantity;
-  }
+// const arr = [1, 2, 3, 4, 5];
 
-  return totalProducts <= containerSize;
-}
+// const [first, second, therd] = arr;
 
-// Перевірка коректності роботи функції:
-console.log(isEnoughCapacity({ apples: 2, grapes: 3, carrots: 1 }, 8)); // true
-console.log(isEnoughCapacity({ apples: 4, grapes: 6, lime: 16 }, 12)); // false
-console.log(isEnoughCapacity({ apples: 1, lime: 5, tomatoes: 3 }, 14)); // true
-console.log(isEnoughCapacity({ apples: 18, potatoes: 5, oranges: 2 }, 7)); // false
+// console.log(first);
 
-//!
-function calcAverageCalories(days) {
-  if (days.length === 0) {
-    return 0; // Якщо масив порожній, повертаємо 0.
-  }
+// const [, , , , last] = arr;
+// console.log(last);
 
-  let totalCalories = 0;
+//! Деструктуризация объекта
 
-  for (const day of days) {
-    totalCalories += day.calories;
-  }
+// const user = {
+//   name: 'Test name',
+//   skills: {
+//     html: true,
+//     css: false,
+//     js: true,
+//   },
+// };
+// const skills = ['html', 'css', 'js'];
 
-  return totalCalories / days.length;
-}
+// const { skills: userSkills } = user;
+// console.log(skills);
 
-// Перевірка коректності роботи функції:
-console.log(
-  calcAverageCalories([
-    { day: 'monday', calories: 3010 },
-    { day: 'tuesday', calories: 3200 },
-    { day: 'wednesday', calories: 3120 },
-    { day: 'thursday', calories: 2900 },
-    { day: 'friday', calories: 3450 },
-    { day: 'saturday', calories: 3280 },
-    { day: 'sunday', calories: 3300 },
-  ]),
-); // 3180
+//! Глубокая деструктуризация объекта
+//* Глубокая деструктуризация позволяет извлекать значения из вложенных объектов и массивов в одну операцию.
 
-console.log(
-  calcAverageCalories([
-    { day: 'monday', calories: 2040 },
-    { day: 'tuesday', calories: 2270 },
-    { day: 'wednesday', calories: 2420 },
-    { day: 'thursday', calories: 1900 },
-    { day: 'friday', calories: 2370 },
-    { day: 'saturday', calories: 2280 },
-    { day: 'sunday', calories: 2610 },
-  ]),
-); // 2270
+// const user = {
+//   name: 'Test name',
+//   skills: {
+//     html: true,
+//     css: false,
+//     js: true,
+//   },
+// };
 
-console.log(calcAverageCalories([])); // 0
+// const {
+//   skills: { html: skillsHTML, css, js },
+// } = user;
 
-//!
-const profile = {
-  username: 'Jacob',
-  playTime: 300,
+// console.log(skillsHTML);
+// console.log(css);
 
-  changeUsername(newName) {
-    this.username = newName;
-  },
+//! деструктуризация объекта в цикле
 
-  updatePlayTime(hours) {
-    this.playTime += hours;
-  },
+//* Деструктуризация объекта в цикле позволяет извлекать значения свойств объекта и использовать их внутри цикла.
+//* Использование деструктуризации:
 
-  getInfo() {
-    return `${this.username} has ${this.playTime} active hours!`;
-  },
-};
+//* В цикле for...of мы используем деструктуризацию объекта, чтобы извлечь значения name и age из каждого объекта в массиве users.
+//* Использование извлеченных значений:
 
-// Перевірка коректності роботи методів:
-console.log(profile.getInfo()); // "Jacob has 300 active hours!"
+//* Внутри цикла мы используем извлеченные значения name и age для создания строки с информацией о каждом пользователе.
 
-profile.changeUsername('Marco');
-console.log(profile.getInfo()); // "Marco has 300 active hours!"
+// const users = [
+//   { name: 'John', age: 30 },
+//   { name: 'Alice', age: 25 },
+//   { name: 'Bob', age: 35 },
+// ];
 
-profile.updatePlayTime(20);
-console.log(profile.getInfo()); // "Marco has 320 active hours!"
+// for (const { name, age } of users) {
+//   console.log(`${name} is ${age} years old`);
+// }
+
+//! операция rest и spread
+//* Операция Rest:
+//* Операция rest используется для сбора всех оставшихся элементов массива или свойств объекта в одну переменную.
+
+// const [first, second, ...rest] = [1, 2, 3, 4, 5];
+// console.log(first); // 1
+// console.log(second); // 2
+// console.log(rest); // [3, 4, 5]
+
+//* Операция Spread:
+//* Операция spread используется для распаковки элементов массива или свойств объекта.
+// const arr1 = [1, 2, 3];
+// const arr2 = [...arr1, 4, 5, 6];
+// console.log(arr2); // [1, 2, 3, 4, 5, 6]
