@@ -330,3 +330,53 @@
 //     'Design Patterns: Elements of Reusable Object-Oriented Software',
 //   ),
 // );
+
+//* Task-6
+//* Напишіть функцію, яка використовує перебираючі методи масиву map та filter, щоб отримати масив назв продуктів, ціна яких менше 2 доларів та відсортуй їх за алфавітним порядком.
+
+// const products = [
+//   { id: 2, name: 'Banana', price: 0.99 },
+//   { id: 1, name: 'Apple', price: 1.99 },
+//   { id: 3, name: 'Orange', price: 2.49 },
+//   { id: 4, name: 'Grapes', price: 3.99 },
+// ];
+
+// function getProducts(arr) {
+//   return arr
+//     .filter(({ price }) => price < 2)
+//     .map(({ name }) => name)
+//     .sort((a, b) => a.localeCompare(b));
+// }
+// console.log(getProducts(products));
+// console.log(products);
+
+// const arr = ['A', 'c', 'B', 'a', 'C', 'b'];
+// console.log(arr.sort((a, b) => a.localeCompare(b)));
+// console.log(arr.toSorted());
+
+//* Task-7 HARD 😈
+
+//* Є рядок в якому довільна кількість літер, гарантовано в рядку немає пробілів та розділових знаків,
+//* потрібно повернути об'єкт де кожна літера буде ключем, а кількість разів яку вона дублюється буде значенням ключа
+
+//* Результат на який очікуємо
+//* const obj = {
+//*     a: 3,
+//*     b: 4,
+//*     s: 3,
+//*      ...
+//* }
+
+// const str = 'absdabsrgbadgtdswwbetflg';
+// const result = str.split('').reduce((acc, item) => {
+//   if (item in acc) {
+//     //acc.hasOwnProperty(item)
+//     acc[item] += 1;
+//   } else {
+//     acc[item] = 1;
+//   }
+
+//   return acc;
+// }, {});
+
+// console.log(result);
